@@ -6,6 +6,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import { Row, Col, Grid } from 'react-flexbox-grid';
+import settings from 'electron-settings';
 import {
   Button,
   Dialog,
@@ -132,8 +133,7 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
   }, []);
 
   useEffect(() => {
-    // const isFirstTimeStart = settings.hasSync('appLanguage');
-    const isFirstTimeStart = true;
+    const isFirstTimeStart = !settings.hasSync('isNotFirstTimeAppStart');
     setIsSelectLanguageDialogOpen(isFirstTimeStart);
 
     if (!isFirstTimeStart) return () => {};
@@ -446,6 +446,7 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
                 rightIcon="chevron-right"
                 onClick={() => {
                   setIsSelectLanguageDialogOpen(false);
+                  settings.setSync('isNotFirstTimeAppStart', true);
                 }}
               >
                 {t('Continue')}
