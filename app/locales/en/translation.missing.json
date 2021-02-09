@@ -1,3 +1,12 @@
 {
-  "Confirm": "Confirm"
+  "Confirm": "Confirm",
+  "Check if all is OK and click \"Confirm\"": "Check if all is OK and click \"Confirm\"",
+  "No, I need to share other thing": "No, I need to share other thing",
+  "Success!": "Success!",
+  "Now you can see your screen on other device": {
+    "": "Now you can see your screen on other device."
+  },
+  "You can manage connected devices by clicking Connected Devices button in top panel": {
+    "": "You can manage connected devices by clicking Connected Devices button in top panel."
+  }
 }

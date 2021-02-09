@@ -40,5 +40,12 @@
   "Choose Entire Screen or App window you want to share": "Choose Entire Screen or App window you want to share",
   "OR": "OR",
   "Entire Screen": "Entire Screen",
-  "Application Window": "Application Window"
+  "Application Window": "Application Window",
+  "Check if all is OK and click Confirm": "Check if all is OK and click Confirm",
+  "Confirm Button Text": "Confirm",
+  "No, I need to choose other": "No, I need to share other thing",
+  "Done!": "Done!",
+  "Now you can see your screen on other device": "Now you can see your screen on other device.",
+  "You can manage connected devices by clicking Connected Devices button in top panel": "You can manage connected devices by clicking Connected Devices button in top panel.",
+  "Connect New Device": "Connect New Device"
 }

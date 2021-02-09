@@ -40,5 +40,12 @@
   "Choose Entire Screen or App window you want to share": "Выберите Весь экран или Окно приложения, которым хотите поделиться",
   "OR": "ИЛИ",
   "Entire Screen": "Весь экран",
-  "Application Window": "Окно приложения"
+  "Application Window": "Окно приложения",
+  "Check if all is OK and click Confirm": "Убедитесь, что все в порядке, и нажмите Подтвердить",
+  "Confirm Button Text": "Подтвердить",
+  "No, I need to choose other": "Нет, мне нужно выбрать другое",
+  "Done!": "Сделано!",
+  "Now you can see your screen on other device": "Теперь вы можете видеть свой экран на другом устройстве.",
+  "You can manage connected devices by clicking Connected Devices button in top panel": "Вы можете управлять подключенными устройствами, нажав кнопку «Подключенные устройства» на верхней панели.",
+  "Connect New Device": "Подключить новое устройство"
 }

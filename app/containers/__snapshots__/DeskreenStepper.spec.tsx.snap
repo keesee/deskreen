@@ -1432,7 +1432,7 @@ exports[`should match exact snapshot 1`] = `
                                   "marginTop": "10px",
                                 }
                               }
-                              text="No, I need to share other thing"
+                              text=""
                             >
                               <button
                                 className="bp3-button bp3-intent-danger"
@@ -1473,12 +1473,6 @@ exports[`should match exact snapshot 1`] = `
                                     </svg>
                                   </span>
                                 </Blueprint3.Icon>
-                                <span
-                                  className="bp3-button-text"
-                                  key="text"
-                                >
-                                  No, I need to share other thing
-                                </span>
                                 <Blueprint3.Icon
                                   key="rightIcon"
                                 />

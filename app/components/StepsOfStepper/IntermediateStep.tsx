@@ -182,7 +182,9 @@ export default function IntermediateStep(props: IntermediateStepProps) {
                     : 'chevron-right'
                 }
               >
-                {isConfirmStep(activeStep, steps) ? 'Confirm' : 'Next'}
+                {isConfirmStep(activeStep, steps)
+                  ? t('Confirm Button Text')
+                  : 'Next'}
               </Button>
             </Col>
           </Row>
@@ -199,7 +201,7 @@ export default function IntermediateStep(props: IntermediateStepProps) {
           }}
           onClick={handleBack}
           icon="chevron-left"
-          text="No, I need to share other thing"
+          text={t('No, I need to choose other')}
         />
       </Row>
     </Col>

@@ -72,9 +72,7 @@ exports[`should match exact snapshot 1`] = `
                 >
                   <div
                     className=""
-                  >
-                    Check if all is OK and click "Confirm"
-                  </div>
+                  />
                 </Blueprint3.Text>
               </div>
             </Col>
@@ -507,52 +505,6 @@ exports[`should match exact snapshot 1`] = `
                     </div>
                   </Blueprint3.Card>
                 </SharingSourcePreviewCard>
-              </div>
-            </Col>
-          </div>
-        </Row>
-        <Row
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
-        >
-          <div
-            className="row"
-            style={
-              Object {
-                "marginBottom": "10px",
-              }
-            }
-          >
-            <Col
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-              xs={12}
-            >
-              <div
-                className="col-xs-12"
-                style={
-                  Object {
-                    "textAlign": "center",
-                  }
-                }
-              >
-                <Blueprint3.Text
-                  className="bp3-text-muted"
-                  ellipsize={false}
-                  tagName="div"
-                >
-                  <div
-                    className="bp3-text-muted"
-                  >
-                    Click "Back" if you need to change something
-                  </div>
-                </Blueprint3.Text>
               </div>
             </Col>
           </div>
