@@ -41,11 +41,16 @@ export default function ToggleThemeBtnGroup() {
         icon="flash"
         onClick={handleToggleLightTheme}
         active={!isDarkTheme}
+        style={{ borderTopLeftRadius: '50px', borderBottomLeftRadius: '50px' }}
       />
       <Button
         icon="moon"
         onClick={handleToggleDarkTheme}
         active={isDarkTheme}
+        style={{
+          borderTopRightRadius: '50px',
+          borderBottomRightRadius: '50px',
+        }}
       />
     </ControlGroup>
   );

@@ -51,6 +51,9 @@ export default function LanguageSelector() {
       value={getLangISOKeyToLangFullNameMap().get(i18n.language)}
       options={languagesList}
       onChange={onChangeLanguageHTMLSelectHandler}
+      style={{
+        borderRadius: '50px',
+      }}
     />
   );
 }

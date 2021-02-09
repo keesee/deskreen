@@ -45,11 +45,11 @@ export default function DeviceInfoCallout(props: DeviceInfoCalloutProps) {
       <H4 style={{ margin: '0 auto', textAlign: 'center' }}>
         {`${t('Partner Device Info')}:`}
       </H4>
-      <Callout id="device-info-callout">
+      <Callout id="device-info-callout" style={{ borderRadius: '8px' }}>
         <Row center="xs">
           <Col xs={12}>
             <Text>
-              Device Type: <span>{deviceType}</span>
+              {`${t('Device Type')}:`} <span>{deviceType}</span>
             </Text>
             <Tooltip content={getContentOfTooltip()} position={Position.TOP}>
               <div
@@ -62,19 +62,20 @@ export default function DeviceInfoCallout(props: DeviceInfoCalloutProps) {
                 }}
               >
                 <Text className="bp3-text-large">
-                  Device IP: <span className="device-ip-span">{deviceIP}</span>
+                  {`${t('Device IP')}:`}{' '}
+                  <span className="device-ip-span">{deviceIP}</span>
                 </Text>
               </div>
             </Tooltip>
             <Text>
-              Device Browser: <span>{deviceBrowser}</span>
+              {`${t('Device Browser')}:`} <span>{deviceBrowser}</span>
             </Text>
             <Text>
-              Device OS: <span>{deviceOS}</span>
+              {`${t('Device OS')}:`} <span>{deviceOS}</span>
             </Text>
             <div style={{ width: '200px', margin: '0 auto' }}>
               <Text className="bp3-text-muted" ellipsize>
-                Session ID: <span>{sharingSessionID}</span>
+                {`${t('Session ID')}:`} <span>{sharingSessionID}</span>
               </Text>
             </div>
           </Col>

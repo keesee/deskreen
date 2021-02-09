@@ -16,12 +16,14 @@ export default function AllowConnectionForDeviceAlert(
 ) {
   const { t } = useTranslation();
   const { device, isOpen, onCancel, onConfirm } = props;
+  const denyText = t('Deny');
+  const allowText = t('Allow');
 
   return (
     <Alert
       className="class-allow-device-to-connect-alert"
-      cancelButtonText="Deny"
-      confirmButtonText="Allow"
+      cancelButtonText={denyText}
+      confirmButtonText={allowText}
       icon="feed"
       intent={Intent.DANGER}
       isOpen={isOpen}

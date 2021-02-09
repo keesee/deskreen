@@ -13,5 +13,12 @@
   "Make sure your computer and screen viewing device are connected to same Wi-Fi": "Переконайтеся, що ваш комп'ютер і пристрій перегляду екрану підключені до одного й того ж Wi-Fi",
   "Or type the following address in browser address bar on any device": "Або введіть наступну адресу в адресному рядку браузера на будь-якому пристрої",
   "Someone is trying to connect, do you allow?": "Хтось намагається підключитися, ви дозволяєте?",
-  "Partner Device Info": "Інформація про пристрій партнера"
+  "Partner Device Info": "Інформація про пристрій партнера",
+  "Device Type": "Тип пристрою",
+  "Device IP": "IP пристрою",
+  "Device Browser": "Веб-браузер пристрою",
+  "Device OS": "ОС пристрою",
+  "Session ID": "ID сесії",
+  "Allow": "Дозволити",
+  "Deny": "Відмовити"
 }

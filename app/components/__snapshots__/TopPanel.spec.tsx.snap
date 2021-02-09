@@ -64,9 +64,7 @@ exports[`<TopPanel /> should match exact snapshot 1`] = `
                   <Blueprint3.Text
                     ellipsize={false}
                     tagName="div"
-                  >
-                    Donate!
-                  </Blueprint3.Text>
+                  />
                 </div>
               </Col>
             </Row>

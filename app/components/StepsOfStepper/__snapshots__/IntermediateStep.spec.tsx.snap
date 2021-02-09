@@ -91,9 +91,7 @@ exports[`should match exact snapshot on each step 1`] = `
                         "paddingRight": "8px",
                       }
                     }
-                  >
-                    Make sure your computer and device are connected to same WiFi
-                  </span>
+                  />
                 </div>
               </Blueprint3.Text>
               <Blueprint3.Text
@@ -293,7 +291,7 @@ exports[`should match exact snapshot on each step 1`] = `
                 <div
                   className="bp3-text-muted"
                 >
-                  or type the following address manually in browser address bar on any device:
+                  :
                 </div>
               </Blueprint3.Text>
             </div>
@@ -1283,15 +1281,25 @@ exports[`should match exact snapshot on each step 3`] = `
                               }
                             }
                           >
-                            Partner Device Info:
+                            :
                           </h4>
                         </Component>
                         <Blueprint3.Callout
                           id="device-info-callout"
+                          style={
+                            Object {
+                              "borderRadius": "8px",
+                            }
+                          }
                         >
                           <div
                             className="bp3-callout"
                             id="device-info-callout"
+                            style={
+                              Object {
+                                "borderRadius": "8px",
+                              }
+                            }
                           >
                             <Row
                               center="xs"
@@ -1312,7 +1320,8 @@ exports[`should match exact snapshot on each step 3`] = `
                                       <div
                                         className=""
                                       >
-                                        Device Type: 
+                                        :
+                                         
                                         <span />
                                       </div>
                                     </Blueprint3.Text>
@@ -1449,7 +1458,8 @@ exports[`should match exact snapshot on each step 3`] = `
                                                         <div
                                                           className="bp3-text-large"
                                                         >
-                                                          Device IP: 
+                                                          :
+                                                           
                                                           <span
                                                             className="device-ip-span"
                                                           />
@@ -1486,7 +1496,8 @@ exports[`should match exact snapshot on each step 3`] = `
                                       <div
                                         className=""
                                       >
-                                        Device Browser: 
+                                        :
+                                         
                                         <span />
                                       </div>
                                     </Blueprint3.Text>
@@ -1497,7 +1508,8 @@ exports[`should match exact snapshot on each step 3`] = `
                                       <div
                                         className=""
                                       >
-                                        Device OS: 
+                                        :
+                                         
                                         <span />
                                       </div>
                                     </Blueprint3.Text>
@@ -1517,7 +1529,8 @@ exports[`should match exact snapshot on each step 3`] = `
                                         <div
                                           className="bp3-text-overflow-ellipsis bp3-text-muted"
                                         >
-                                          Session ID: 
+                                          :
+                                           
                                           <span />
                                         </div>
                                       </Blueprint3.Text>

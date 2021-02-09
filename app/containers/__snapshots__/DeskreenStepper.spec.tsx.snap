@@ -159,7 +159,7 @@ exports[`should match exact snapshot 1`] = `
                             }
                             disabled={false}
                             index={0}
-                            key=".$Connect"
+                            key=".$"
                             last={false}
                             orientation="horizontal"
                           >
@@ -350,9 +350,7 @@ exports[`should match exact snapshot 1`] = `
                                               >
                                                 <div
                                                   className="bp3-text-muted"
-                                                >
-                                                  Connect
-                                                </div>
+                                                />
                                               </Blueprint3.Text>
                                             </span>
                                           </ForwardRef(Typography)>
@@ -375,7 +373,7 @@ exports[`should match exact snapshot 1`] = `
                             }
                             disabled={true}
                             index={1}
-                            key=".$Select"
+                            key=".$"
                             last={false}
                             orientation="horizontal"
                           >
@@ -622,9 +620,7 @@ exports[`should match exact snapshot 1`] = `
                                               >
                                                 <div
                                                   className="bp3-text-muted"
-                                                >
-                                                  Select
-                                                </div>
+                                                />
                                               </Blueprint3.Text>
                                             </span>
                                           </ForwardRef(Typography)>
@@ -647,7 +643,7 @@ exports[`should match exact snapshot 1`] = `
                             }
                             disabled={true}
                             index={2}
-                            key=".$Confirm"
+                            key=".$"
                             last={true}
                             orientation="horizontal"
                           >
@@ -894,9 +890,7 @@ exports[`should match exact snapshot 1`] = `
                                               >
                                                 <div
                                                   className="bp3-text-muted"
-                                                >
-                                                  Confirm
-                                                </div>
+                                                />
                                               </Blueprint3.Text>
                                             </span>
                                           </ForwardRef(Typography)>
@@ -940,9 +934,9 @@ exports[`should match exact snapshot 1`] = `
                     resetUserAllowedConnection={[Function]}
                     steps={
                       Array [
-                        "Connect",
-                        "Select",
-                        "Confirm",
+                        "",
+                        "",
+                        "",
                       ]
                     }
                   >
@@ -997,9 +991,7 @@ exports[`should match exact snapshot 1`] = `
                                       "paddingRight": "8px",
                                     }
                                   }
-                                >
-                                  Make sure your computer and device are connected to same WiFi
-                                </span>
+                                />
                               </div>
                             </Blueprint3.Text>
                             <Blueprint3.Text
@@ -1199,7 +1191,7 @@ exports[`should match exact snapshot 1`] = `
                               <div
                                 className="bp3-text-muted"
                               >
-                                or type the following address manually in browser address bar on any device:
+                                :
                               </div>
                             </Blueprint3.Text>
                           </div>
@@ -1511,9 +1503,9 @@ exports[`should match exact snapshot 1`] = `
           <Blueprint3.Alert
             canEscapeKeyCancel={false}
             canOutsideClickCancel={false}
-            cancelButtonText="Deny"
+            cancelButtonText=""
             className="class-allow-device-to-connect-alert"
-            confirmButtonText="Allow"
+            confirmButtonText=""
             icon="feed"
             intent="danger"
             isOpen={false}
@@ -1682,7 +1674,9 @@ exports[`should match exact snapshot 1`] = `
                                     <div
                                       class="bp3-html-select"
                                     >
-                                      <select>
+                                      <select
+                                        style="border-radius: 50px;"
+                                      >
                                         <option
                                           value="English"
                                         >
@@ -1759,6 +1753,7 @@ exports[`should match exact snapshot 1`] = `
                                     >
                                       <button
                                         class="bp3-button bp3-active"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -1783,6 +1778,7 @@ exports[`should match exact snapshot 1`] = `
                                       </button>
                                       <button
                                         class="bp3-button"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -1815,6 +1811,7 @@ exports[`should match exact snapshot 1`] = `
                               >
                                 <button
                                   class="bp3-button bp3-minimal"
+                                  style="border-radius: 50px;"
                                   type="button"
                                 >
                                   <span
@@ -1929,7 +1926,9 @@ exports[`should match exact snapshot 1`] = `
                                     <div
                                       class="bp3-html-select"
                                     >
-                                      <select>
+                                      <select
+                                        style="border-radius: 50px;"
+                                      >
                                         <option
                                           value="English"
                                         >
@@ -2006,6 +2005,7 @@ exports[`should match exact snapshot 1`] = `
                                     >
                                       <button
                                         class="bp3-button bp3-active"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -2030,6 +2030,7 @@ exports[`should match exact snapshot 1`] = `
                                       </button>
                                       <button
                                         class="bp3-button"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -2062,6 +2063,7 @@ exports[`should match exact snapshot 1`] = `
                               >
                                 <button
                                   class="bp3-button bp3-minimal"
+                                  style="border-radius: 50px;"
                                   type="button"
                                 >
                                   <span
@@ -2343,6 +2345,11 @@ exports[`should match exact snapshot 1`] = `
                                                       "Українська",
                                                     ]
                                                   }
+                                                  style={
+                                                    Object {
+                                                      "borderRadius": "50px",
+                                                    }
+                                                  }
                                                 >
                                                   <div
                                                     className="bp3-html-select"
@@ -2350,6 +2357,11 @@ exports[`should match exact snapshot 1`] = `
                                                     <select
                                                       multiple={false}
                                                       onChange={[Function]}
+                                                      style={
+                                                        Object {
+                                                          "borderRadius": "50px",
+                                                        }
+                                                      }
                                                     >
                                                       <option
                                                         key="English"
@@ -2490,6 +2502,12 @@ exports[`should match exact snapshot 1`] = `
                                                       active={true}
                                                       icon="flash"
                                                       onClick={[Function]}
+                                                      style={
+                                                        Object {
+                                                          "borderBottomLeftRadius": "50px",
+                                                          "borderTopLeftRadius": "50px",
+                                                        }
+                                                      }
                                                     >
                                                       <button
                                                         className="bp3-button bp3-active"
@@ -2497,6 +2515,12 @@ exports[`should match exact snapshot 1`] = `
                                                         onClick={[Function]}
                                                         onKeyDown={[Function]}
                                                         onKeyUp={[Function]}
+                                                        style={
+                                                          Object {
+                                                            "borderBottomLeftRadius": "50px",
+                                                            "borderTopLeftRadius": "50px",
+                                                          }
+                                                        }
                                                         type="button"
                                                       >
                                                         <Blueprint3.Icon
@@ -2533,6 +2557,12 @@ exports[`should match exact snapshot 1`] = `
                                                       active={false}
                                                       icon="moon"
                                                       onClick={[Function]}
+                                                      style={
+                                                        Object {
+                                                          "borderBottomRightRadius": "50px",
+                                                          "borderTopRightRadius": "50px",
+                                                        }
+                                                      }
                                                     >
                                                       <button
                                                         className="bp3-button"
@@ -2540,6 +2570,12 @@ exports[`should match exact snapshot 1`] = `
                                                         onClick={[Function]}
                                                         onKeyDown={[Function]}
                                                         onKeyUp={[Function]}
+                                                        style={
+                                                          Object {
+                                                            "borderBottomRightRadius": "50px",
+                                                            "borderTopRightRadius": "50px",
+                                                          }
+                                                        }
                                                         type="button"
                                                       >
                                                         <Blueprint3.Icon
@@ -2601,6 +2637,11 @@ exports[`should match exact snapshot 1`] = `
                                         minimal={true}
                                         onClick={[Function]}
                                         rightIcon="chevron-right"
+                                        style={
+                                          Object {
+                                            "borderRadius": "50px",
+                                          }
+                                        }
                                       >
                                         <button
                                           className="bp3-button bp3-minimal"
@@ -2608,6 +2649,11 @@ exports[`should match exact snapshot 1`] = `
                                           onClick={[Function]}
                                           onKeyDown={[Function]}
                                           onKeyUp={[Function]}
+                                          style={
+                                            Object {
+                                              "borderRadius": "50px",
+                                            }
+                                          }
                                           type="button"
                                         >
                                           <Blueprint3.Icon
@@ -2746,7 +2792,9 @@ exports[`should match exact snapshot 1`] = `
                           <div
                             class="bp3-html-select"
                           >
-                            <select>
+                            <select
+                              style="border-radius: 50px;"
+                            >
                               <option
                                 value="English"
                               >
@@ -2823,6 +2871,7 @@ exports[`should match exact snapshot 1`] = `
                           >
                             <button
                               class="bp3-button bp3-active"
+                              style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
                               type="button"
                             >
                               <span
@@ -2847,6 +2896,7 @@ exports[`should match exact snapshot 1`] = `
                             </button>
                             <button
                               class="bp3-button"
+                              style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;"
                               type="button"
                             >
                               <span
@@ -2879,6 +2929,7 @@ exports[`should match exact snapshot 1`] = `
                     >
                       <button
                         class="bp3-button bp3-minimal"
+                        style="border-radius: 50px;"
                         type="button"
                       >
                         <span

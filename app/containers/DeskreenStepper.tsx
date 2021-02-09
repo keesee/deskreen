@@ -448,6 +448,7 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
                   setIsSelectLanguageDialogOpen(false);
                   settings.setSync('isNotFirstTimeAppStart', true);
                 }}
+                style={{ borderRadius: '50px' }}
               >
                 {t('Continue')}
               </Button>

@@ -355,6 +355,7 @@ exports[`should match exact snapshot 1`] = `
                                     >
                                       <button
                                         class="bp3-button bp3-active"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -379,6 +380,7 @@ exports[`should match exact snapshot 1`] = `
                                       </button>
                                       <button
                                         class="bp3-button"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -457,7 +459,9 @@ exports[`should match exact snapshot 1`] = `
                                     <div
                                       class="bp3-html-select"
                                     >
-                                      <select>
+                                      <select
+                                        style="border-radius: 50px;"
+                                      >
                                         <option
                                           value="English"
                                         >
@@ -871,6 +875,7 @@ exports[`should match exact snapshot 1`] = `
                                     >
                                       <button
                                         class="bp3-button bp3-active"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -895,6 +900,7 @@ exports[`should match exact snapshot 1`] = `
                                       </button>
                                       <button
                                         class="bp3-button"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;"
                                         type="button"
                                       >
                                         <span
@@ -973,7 +979,9 @@ exports[`should match exact snapshot 1`] = `
                                     <div
                                       class="bp3-html-select"
                                     >
-                                      <select>
+                                      <select
+                                        style="border-radius: 50px;"
+                                      >
                                         <option
                                           value="English"
                                         >
@@ -1701,6 +1709,12 @@ exports[`should match exact snapshot 1`] = `
                                                               active={true}
                                                               icon="flash"
                                                               onClick={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "borderBottomLeftRadius": "50px",
+                                                                  "borderTopLeftRadius": "50px",
+                                                                }
+                                                              }
                                                             >
                                                               <button
                                                                 className="bp3-button bp3-active"
@@ -1708,6 +1722,12 @@ exports[`should match exact snapshot 1`] = `
                                                                 onClick={[Function]}
                                                                 onKeyDown={[Function]}
                                                                 onKeyUp={[Function]}
+                                                                style={
+                                                                  Object {
+                                                                    "borderBottomLeftRadius": "50px",
+                                                                    "borderTopLeftRadius": "50px",
+                                                                  }
+                                                                }
                                                                 type="button"
                                                               >
                                                                 <Blueprint3.Icon
@@ -1744,6 +1764,12 @@ exports[`should match exact snapshot 1`] = `
                                                               active={false}
                                                               icon="moon"
                                                               onClick={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "borderBottomRightRadius": "50px",
+                                                                  "borderTopRightRadius": "50px",
+                                                                }
+                                                              }
                                                             >
                                                               <button
                                                                 className="bp3-button"
@@ -1751,6 +1777,12 @@ exports[`should match exact snapshot 1`] = `
                                                                 onClick={[Function]}
                                                                 onKeyDown={[Function]}
                                                                 onKeyUp={[Function]}
+                                                                style={
+                                                                  Object {
+                                                                    "borderBottomRightRadius": "50px",
+                                                                    "borderTopRightRadius": "50px",
+                                                                  }
+                                                                }
                                                                 type="button"
                                                               >
                                                                 <Blueprint3.Icon
@@ -1890,6 +1922,11 @@ exports[`should match exact snapshot 1`] = `
                                                               "Українська",
                                                             ]
                                                           }
+                                                          style={
+                                                            Object {
+                                                              "borderRadius": "50px",
+                                                            }
+                                                          }
                                                         >
                                                           <div
                                                             className="bp3-html-select"
@@ -1897,6 +1934,11 @@ exports[`should match exact snapshot 1`] = `
                                                             <select
                                                               multiple={false}
                                                               onChange={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "borderRadius": "50px",
+                                                                }
+                                                              }
                                                             >
                                                               <option
                                                                 key="English"
