@@ -109,7 +109,7 @@ const ScanQRStep: React.FC = () => {
         <Text className="bp3-text">{t('Scan the QR code')}</Text>
       </div>
       <div>
-        <Tooltip content="Click to make bigger" position={Position.LEFT}>
+        <Tooltip content={t('Click to make bigger')} position={Position.LEFT}>
           <Button
             id="magnify-qr-code-button"
             className={classes.smallQRCode}
@@ -139,7 +139,7 @@ const ScanQRStep: React.FC = () => {
         </Text>
       </div>
 
-      <Tooltip content="Click to copy" position={Position.LEFT}>
+      <Tooltip content={t('Click to copy')} position={Position.LEFT}>
         <Button
           intent="primary"
           icon="duplicate"

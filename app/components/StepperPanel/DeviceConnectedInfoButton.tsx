@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import { Icon, Text, Button, Popover, Tooltip } from '@blueprintjs/core';
+import { useTranslation } from 'react-i18next';
 import DeviceInfoCallout from '../DeviceInfoCallout';
 import isWithReactRevealAnimations from '../../utils/isWithReactRevealAnimations';
 
@@ -47,6 +48,8 @@ const getDeviceConnectedPopoverContent = (
 export default function DeviceConnectedInfoButton(
   props: DeviceConnectedInfoButtonProps
 ) {
+  const { t } = useTranslation();
+
   const { device, onDisconnect } = props;
 
   return (
@@ -58,7 +61,7 @@ export default function DeviceConnectedInfoButton(
         transitionDuration={isWithReactRevealAnimations() ? 700 : 0}
       >
         <Tooltip
-          content={<Text>Click to manage</Text>}
+          content={<Text>{t('Click to see more')}</Text>}
           position="right"
           hoverOpenDelay={400}
         >
@@ -78,7 +81,7 @@ export default function DeviceConnectedInfoButton(
                 <Icon icon="info-sign" />
               </Col>
               <Col xs>
-                <Text>Connected</Text>
+                <Text>{t('Connected')}</Text>
               </Col>
             </Row>
           </Button>

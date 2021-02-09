@@ -106,7 +106,7 @@ exports[`should match exact snapshot on each step 1`] = `
             </div>
             <div>
               <Blueprint3.Tooltip
-                content="Click to make bigger"
+                content=""
                 hoverCloseDelay={0}
                 hoverOpenDelay={100}
                 minimal={false}
@@ -118,7 +118,7 @@ exports[`should match exact snapshot on each step 1`] = `
                   boundary="scrollParent"
                   canEscapeKeyClose={false}
                   captureDismiss={false}
-                  content="Click to make bigger"
+                  content=""
                   defaultIsOpen={false}
                   disabled={false}
                   enforceFocus={false}
@@ -296,7 +296,7 @@ exports[`should match exact snapshot on each step 1`] = `
               </Blueprint3.Text>
             </div>
             <Blueprint3.Tooltip
-              content="Click to copy"
+              content=""
               hoverCloseDelay={0}
               hoverOpenDelay={100}
               minimal={false}
@@ -308,7 +308,7 @@ exports[`should match exact snapshot on each step 1`] = `
                 boundary="scrollParent"
                 canEscapeKeyClose={false}
                 captureDismiss={false}
-                content="Click to copy"
+                content=""
                 defaultIsOpen={false}
                 disabled={false}
                 enforceFocus={false}
@@ -1332,8 +1332,7 @@ exports[`should match exact snapshot on each step 3`] = `
                                             ellipsize={false}
                                             tagName="div"
                                           >
-                                            This should match with 'Device IP' displayed on the screen of device
-        that is trying to connect.
+                                            
                                           </Blueprint3.Text>
                                           <span
                                             style={
@@ -1346,8 +1345,7 @@ exports[`should match exact snapshot on each step 3`] = `
                                               ellipsize={false}
                                               tagName="div"
                                             >
-                                              If IPs don't match click 'Deny' or 'Disconnect' button immediately to
-          secure your computer!
+                                              
                                             </Blueprint3.Text>
                                           </span>
                                         </React.Fragment>
@@ -1369,8 +1367,7 @@ exports[`should match exact snapshot on each step 3`] = `
                                               ellipsize={false}
                                               tagName="div"
                                             >
-                                              This should match with 'Device IP' displayed on the screen of device
-        that is trying to connect.
+                                              
                                             </Blueprint3.Text>
                                             <span
                                               style={
@@ -1383,8 +1380,7 @@ exports[`should match exact snapshot on each step 3`] = `
                                                 ellipsize={false}
                                                 tagName="div"
                                               >
-                                                If IPs don't match click 'Deny' or 'Disconnect' button immediately to
-          secure your computer!
+                                                
                                               </Blueprint3.Text>
                                             </span>
                                           </React.Fragment>

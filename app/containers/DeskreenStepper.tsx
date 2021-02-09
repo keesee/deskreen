@@ -287,7 +287,9 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
 
     addToast(
       <Text>
-        Device is successfully disconnected by you. You can connect new device
+        {t(
+          'Device is successfully disconnected by you. You can connect a new device'
+        )}
       </Text>,
       {
         appearance: 'info',

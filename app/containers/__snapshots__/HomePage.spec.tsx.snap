@@ -83,7 +83,7 @@ exports[`should match exact snapshot 1`] = `
                           className=""
                         >
                           <Blueprint3.Tooltip
-                            content="If you like Deskreen, consider donating! Deskreen is free and opensource forever! You can help us to make Deskreen even better!"
+                            content=""
                             hoverCloseDelay={0}
                             hoverOpenDelay={100}
                             minimal={false}
@@ -95,7 +95,7 @@ exports[`should match exact snapshot 1`] = `
                               boundary="scrollParent"
                               canEscapeKeyClose={false}
                               captureDismiss={false}
-                              content="If you like Deskreen, consider donating! Deskreen is free and opensource forever! You can help us to make Deskreen even better!"
+                              content=""
                               defaultIsOpen={false}
                               disabled={false}
                               enforceFocus={false}
@@ -268,7 +268,7 @@ exports[`should match exact snapshot 1`] = `
                             id="logo-with-popover-visit-website"
                           >
                             <Blueprint3.Tooltip
-                              content="Click to visit our website"
+                              content=""
                               hoverCloseDelay={0}
                               hoverOpenDelay={100}
                               minimal={false}
@@ -280,7 +280,7 @@ exports[`should match exact snapshot 1`] = `
                                 boundary="scrollParent"
                                 canEscapeKeyClose={false}
                                 captureDismiss={false}
-                                content="Click to visit our website"
+                                content=""
                                 defaultIsOpen={false}
                                 disabled={false}
                                 enforceFocus={false}
@@ -413,7 +413,7 @@ exports[`should match exact snapshot 1`] = `
                       className="makeStyles-topPanelControlButtonMargin-150"
                     >
                       <Blueprint3.Tooltip
-                        content="Connected Devices"
+                        content=""
                         hoverCloseDelay={0}
                         hoverOpenDelay={100}
                         minimal={false}
@@ -425,7 +425,7 @@ exports[`should match exact snapshot 1`] = `
                           boundary="scrollParent"
                           canEscapeKeyClose={false}
                           captureDismiss={false}
-                          content="Connected Devices"
+                          content=""
                           defaultIsOpen={false}
                           disabled={false}
                           enforceFocus={false}
@@ -558,7 +558,7 @@ exports[`should match exact snapshot 1`] = `
                       className="makeStyles-topPanelControlButtonMargin-171"
                     >
                       <Blueprint3.Tooltip
-                        content="Tutorial"
+                        content=""
                         hoverCloseDelay={0}
                         hoverOpenDelay={100}
                         minimal={false}
@@ -570,7 +570,7 @@ exports[`should match exact snapshot 1`] = `
                           boundary="scrollParent"
                           canEscapeKeyClose={false}
                           captureDismiss={false}
-                          content="Tutorial"
+                          content=""
                           defaultIsOpen={false}
                           disabled={false}
                           enforceFocus={false}
@@ -708,7 +708,7 @@ exports[`should match exact snapshot 1`] = `
                       className="makeStyles-topPanelControlButtonMargin-192"
                     >
                       <Blueprint3.Tooltip
-                        content="Settings"
+                        content=""
                         hoverCloseDelay={0}
                         hoverOpenDelay={100}
                         minimal={false}
@@ -720,7 +720,7 @@ exports[`should match exact snapshot 1`] = `
                           boundary="scrollParent"
                           canEscapeKeyClose={false}
                           captureDismiss={false}
-                          content="Settings"
+                          content=""
                           defaultIsOpen={false}
                           disabled={false}
                           enforceFocus={false}
@@ -1926,7 +1926,7 @@ exports[`should match exact snapshot 1`] = `
                                   </div>
                                   <div>
                                     <Blueprint3.Tooltip
-                                      content="Click to make bigger"
+                                      content=""
                                       hoverCloseDelay={0}
                                       hoverOpenDelay={100}
                                       minimal={false}
@@ -1938,7 +1938,7 @@ exports[`should match exact snapshot 1`] = `
                                         boundary="scrollParent"
                                         canEscapeKeyClose={false}
                                         captureDismiss={false}
-                                        content="Click to make bigger"
+                                        content=""
                                         defaultIsOpen={false}
                                         disabled={false}
                                         enforceFocus={false}
@@ -2116,7 +2116,7 @@ exports[`should match exact snapshot 1`] = `
                                     </Blueprint3.Text>
                                   </div>
                                   <Blueprint3.Tooltip
-                                    content="Click to copy"
+                                    content=""
                                     hoverCloseDelay={0}
                                     hoverOpenDelay={100}
                                     minimal={false}
@@ -2128,7 +2128,7 @@ exports[`should match exact snapshot 1`] = `
                                       boundary="scrollParent"
                                       canEscapeKeyClose={false}
                                       captureDismiss={false}
-                                      content="Click to copy"
+                                      content=""
                                       defaultIsOpen={false}
                                       disabled={false}
                                       enforceFocus={false}

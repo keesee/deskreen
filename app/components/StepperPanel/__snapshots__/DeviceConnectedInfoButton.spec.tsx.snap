@@ -114,7 +114,7 @@ exports[`should match exact snapshot 1`] = `
                           ellipsize={false}
                           tagName="div"
                         >
-                          Click to manage
+                          
                         </Blueprint3.Text>
                       }
                       hoverCloseDelay={0}
@@ -135,7 +135,7 @@ exports[`should match exact snapshot 1`] = `
                             ellipsize={false}
                             tagName="div"
                           >
-                            Click to manage
+                            
                           </Blueprint3.Text>
                         }
                         defaultIsOpen={false}
@@ -274,9 +274,7 @@ exports[`should match exact snapshot 1`] = `
                                                   >
                                                     <div
                                                       className=""
-                                                    >
-                                                      Connected
-                                                    </div>
+                                                    />
                                                   </Blueprint3.Text>
                                                 </div>
                                               </Col>

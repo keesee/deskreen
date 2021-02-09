@@ -1006,7 +1006,7 @@ exports[`should match exact snapshot 1`] = `
                           </div>
                           <div>
                             <Blueprint3.Tooltip
-                              content="Click to make bigger"
+                              content=""
                               hoverCloseDelay={0}
                               hoverOpenDelay={100}
                               minimal={false}
@@ -1018,7 +1018,7 @@ exports[`should match exact snapshot 1`] = `
                                 boundary="scrollParent"
                                 canEscapeKeyClose={false}
                                 captureDismiss={false}
-                                content="Click to make bigger"
+                                content=""
                                 defaultIsOpen={false}
                                 disabled={false}
                                 enforceFocus={false}
@@ -1196,7 +1196,7 @@ exports[`should match exact snapshot 1`] = `
                             </Blueprint3.Text>
                           </div>
                           <Blueprint3.Tooltip
-                            content="Click to copy"
+                            content=""
                             hoverCloseDelay={0}
                             hoverOpenDelay={100}
                             minimal={false}
@@ -1208,7 +1208,7 @@ exports[`should match exact snapshot 1`] = `
                               boundary="scrollParent"
                               canEscapeKeyClose={false}
                               captureDismiss={false}
-                              content="Click to copy"
+                              content=""
                               defaultIsOpen={false}
                               disabled={false}
                               enforceFocus={false}

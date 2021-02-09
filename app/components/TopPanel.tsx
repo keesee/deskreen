@@ -75,12 +75,14 @@ export default function TopPanel(props: any) {
     setIsDrawerOpen(!isDrawersOpen);
   }, [isDrawersOpen]);
 
+  const donateTooltipContent = t(
+    'If you like Deskreen consider contributing financially Deskreen is open-source Your donations keep us motivated to make Deskreen even better'
+  );
+  const deskreenButtonTooltip = t('Click to visit our website');
+
   const renderDonateButton = useCallback(() => {
     return (
-      <Tooltip
-        content="If you like Deskreen, consider donating! Deskreen is free and opensource forever! You can help us to make Deskreen even better!"
-        position={Position.BOTTOM}
-      >
+      <Tooltip content={donateTooltipContent} position={Position.BOTTOM}>
         <Button
           style={{
             marginRight: '10px',
@@ -114,7 +116,7 @@ export default function TopPanel(props: any) {
   const renderConnectedDevicesListButton = useCallback(() => {
     return (
       <div className={getClassesCallback().topPanelControlButtonMargin}>
-        <Tooltip content="Connected Devices" position={Position.BOTTOM}>
+        <Tooltip content={t('Connected Devices')} position={Position.BOTTOM}>
           <Button
             id="top-panel-connected-devices-list-button"
             intent="primary"
@@ -135,7 +137,7 @@ export default function TopPanel(props: any) {
   const renderHelpButton = useCallback(() => {
     return (
       <div className={getClassesCallback().topPanelControlButtonMargin}>
-        <Tooltip content="Tutorial" position={Position.BOTTOM}>
+        <Tooltip content={t('Tutorial')} position={Position.BOTTOM}>
           <Button
             id="top-panel-help-button"
             intent="none"
@@ -158,7 +160,7 @@ export default function TopPanel(props: any) {
   const renderSettingsButton = useCallback(() => {
     return (
       <div className={getClassesCallback().topPanelControlButtonMargin}>
-        <Tooltip content="Settings" position={Position.BOTTOM}>
+        <Tooltip content={t('Settings')} position={Position.BOTTOM}>
           <Button
             id="top-panel-settings-button"
             onClick={handleSettingsOpen}
@@ -181,10 +183,7 @@ export default function TopPanel(props: any) {
         id="logo-with-popover-visit-website"
         className={getClassesCallback().logoWithAppName}
       >
-        <Tooltip
-          content="Click to visit our website"
-          position={Position.BOTTOM}
-        >
+        <Tooltip content={deskreenButtonTooltip} position={Position.BOTTOM}>
           <Button
             minimal
             onClick={() => {

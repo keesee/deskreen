@@ -2,7 +2,7 @@
 import React from 'react';
 import { Callout, Text, H4, Tooltip, Position } from '@blueprintjs/core';
 import { Row, Col } from 'react-flexbox-grid';
-import { useTranslation } from 'react-i18next';
+import { TFunction, useTranslation } from 'react-i18next';
 
 interface DeviceInfoCalloutProps {
   deviceType: string | undefined;
@@ -12,18 +12,16 @@ interface DeviceInfoCalloutProps {
   deviceBrowser: string | undefined;
 }
 
-function getContentOfTooltip() {
+function getContentOfTooltip(t: TFunction<string>) {
   return (
     <>
       <Text>
-        {`This should match with 'Device IP' displayed on the screen of device
-        that is trying to connect.`}
+        {t(
+          'This should match with Device IP displayed on the screen of device that is trying to connect'
+        )}
       </Text>
       <span style={{ fontWeight: 900 }}>
-        <Text>
-          {`If IPs don't match click 'Deny' or 'Disconnect' button immediately to
-          secure your computer!`}
-        </Text>
+        <Text>{t('If IP addresses dont match click Disconnect button')}</Text>
       </span>
     </>
   );
@@ -51,7 +49,7 @@ export default function DeviceInfoCallout(props: DeviceInfoCalloutProps) {
             <Text>
               {`${t('Device Type')}:`} <span>{deviceType}</span>
             </Text>
-            <Tooltip content={getContentOfTooltip()} position={Position.TOP}>
+            <Tooltip content={getContentOfTooltip(t)} position={Position.TOP}>
               <div
                 style={{
                   fontWeight: 900,

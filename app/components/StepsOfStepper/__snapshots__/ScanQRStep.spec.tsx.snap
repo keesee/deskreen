@@ -33,7 +33,7 @@ exports[`<ScanQRStep /> when rendered should match exact snapshot 1`] = `
   </div>
   <div>
     <Blueprint3.Tooltip
-      content="Click to make bigger"
+      content=""
       hoverCloseDelay={0}
       hoverOpenDelay={100}
       minimal={false}
@@ -80,7 +80,7 @@ exports[`<ScanQRStep /> when rendered should match exact snapshot 1`] = `
     </Blueprint3.Text>
   </div>
   <Blueprint3.Tooltip
-    content="Click to copy"
+    content=""
     hoverCloseDelay={0}
     hoverOpenDelay={100}
     minimal={false}
