@@ -6,6 +6,7 @@ import React, { useCallback, useContext } from 'react';
 import { Button, Text, Icon, Position, Tooltip } from '@blueprintjs/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Col, Row } from 'react-flexbox-grid';
+import { useTranslation } from 'react-i18next';
 import SettingsOverlay from './SettingsOverlay/SettingsOverlay';
 import ConnectedDevicesListDrawer from './ConnectedDevicesListDrawer';
 import { SettingsContext } from '../containers/SettingsProvider';
@@ -52,6 +53,7 @@ const useStylesWithTheme = (isDarkTheme: boolean) =>
   );
 
 export default function TopPanel(props: any) {
+  const { t } = useTranslation();
   const { isDarkTheme } = useContext(SettingsContext);
 
   const getClassesCallback = useCallback(() => {
@@ -100,7 +102,7 @@ export default function TopPanel(props: any) {
             </Col>
             <Col xs>
               <div style={{ transform: 'translateY(2px) translateX(-5px)' }}>
-                <Text>Donate!</Text>
+                <Text>{t('Donate')}</Text>
               </div>
             </Col>
           </Row>

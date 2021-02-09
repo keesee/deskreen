@@ -1,10 +1,17 @@
 {
   "Hello": "Hello",
   "Continue": "Continue",
-  "Language": "Language 🇬🇧 / 🇺🇸",
-  "Signaling server is running on port": "Signaling server is running on port ⚓",
+  "Language": "Language",
   "ru": "Русский",
   "en": "English",
   "ua": "Українська",
-  "Scan the QR code": "Scan the QR code"
+  "Donate": "Donate",
+  "Connect": "Connect",
+  "Select": "Select",
+  "Confirm": "Confirm",
+  "Scan the QR code": "Scan the QR code",
+  "Make sure your computer and screen viewing device are connected to same Wi-Fi": "Make sure your computer and screen viewing device are connected to same Wi-Fi",
+  "Or type the following address in browser address bar on any device": "Or type the following address in browser address bar on any device",
+  "Someone is trying to connect, do you allow?": "Someone is trying to connect, do you allow?",
+  "Partner Device Info": "Partner Device Info"
 }

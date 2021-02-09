@@ -1,3 +1,10 @@
 {
-  "Confirm": "Confirm"
+  "Confirm": "Confirm",
+  "Make sure your computer and device are connected to same WiFi": "Make sure your computer and device are connected to same WiFi",
+  "Make sure your computer and viewing device are connected to same WiFi": "Make sure your computer and viewing device are connected to same WiFi",
+  "Connect": "Connect",
+  "Select": "Select",
+  "Device is trying to connect, do you allow": "Device is trying to connect, do you allow",
+  "Someone is trying to connect, do you allow?": "Someone is trying to connect, do you allow?",
+  "Partner Device Info": "Partner Device Info"
 }

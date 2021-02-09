@@ -2,6 +2,7 @@
 import React from 'react';
 import { Callout, Text, H4, Tooltip, Position } from '@blueprintjs/core';
 import { Row, Col } from 'react-flexbox-grid';
+import { useTranslation } from 'react-i18next';
 
 interface DeviceInfoCalloutProps {
   deviceType: string | undefined;
@@ -29,6 +30,8 @@ function getContentOfTooltip() {
 }
 
 export default function DeviceInfoCallout(props: DeviceInfoCalloutProps) {
+  const { t } = useTranslation();
+
   const {
     deviceType,
     deviceIP,
@@ -40,7 +43,7 @@ export default function DeviceInfoCallout(props: DeviceInfoCalloutProps) {
   return (
     <>
       <H4 style={{ margin: '0 auto', textAlign: 'center' }}>
-        Partner Device Info:
+        {`${t('Partner Device Info')}:`}
       </H4>
       <Callout id="device-info-callout">
         <Row center="xs">

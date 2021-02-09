@@ -101,7 +101,9 @@ const ScanQRStep: React.FC = () => {
               borderRadius: '20px',
             }}
           >
-            Make sure your computer and device are connected to same WiFi
+            {t(
+              'Make sure your computer and screen viewing device are connected to same Wi-Fi'
+            )}
           </span>
         </Text>
         <Text className="bp3-text">{t('Scan the QR code')}</Text>
@@ -131,8 +133,9 @@ const ScanQRStep: React.FC = () => {
       </div>
       <div style={{ marginBottom: '10px' }}>
         <Text className="bp3-text-muted">
-          or type the following address manually in browser address bar on any
-          device:
+          {`${t(
+            'Or type the following address in browser address bar on any device'
+          )}:`}
         </Text>
       </div>
 

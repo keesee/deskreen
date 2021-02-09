@@ -178,7 +178,7 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
             {`Website: `}
             <a
               onClick={() => {
-                shell.openExternal('https://www.deskreen.com');
+                shell.openExternal('https://deskreen.com');
               }}
               style={
                 isDarkTheme

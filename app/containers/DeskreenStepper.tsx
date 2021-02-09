@@ -18,7 +18,7 @@ import {
   Spinner,
   Text,
 } from '@blueprintjs/core';
-import { useTranslation } from 'react-i18next';
+import { TFunction, useTranslation } from 'react-i18next';
 
 import { useToasts } from 'react-toast-notifications';
 
@@ -68,8 +68,8 @@ const useStyles = makeStyles(() =>
   })
 );
 
-function getSteps() {
-  return ['Connect', 'Select', 'Confirm'];
+function getSteps(t: TFunction<string>) {
+  return [t('Connect'), t('Select'), t('Confirm')];
 }
 
 // eslint-disable-next-line react/display-name
@@ -168,7 +168,7 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
     isApplicationWindowSelected,
     setIsApplicationWindowSelected,
   ] = useState(false);
-  const steps = getSteps();
+  const steps = getSteps(t);
 
   const handleNext = useCallback(() => {
     if (activeStep === steps.length - 1) {

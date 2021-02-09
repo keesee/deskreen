@@ -1,5 +1,6 @@
 import React from 'react';
 import { Intent, Alert, H4 } from '@blueprintjs/core';
+import { useTranslation } from 'react-i18next';
 import DeviceInfoCallout from './DeviceInfoCallout';
 import isWithReactRevealAnimations from '../utils/isWithReactRevealAnimations';
 
@@ -13,6 +14,7 @@ interface AllowConnectionForDeviceAlertProps {
 export default function AllowConnectionForDeviceAlert(
   props: AllowConnectionForDeviceAlertProps
 ) {
+  const { t } = useTranslation();
   const { device, isOpen, onCancel, onConfirm } = props;
 
   return (
@@ -30,7 +32,7 @@ export default function AllowConnectionForDeviceAlert(
       // @ts-ignore
       usePortal={false}
     >
-      <H4>Device is trying to connect, do you allow?</H4>
+      <H4>{t('Someone is trying to connect, do you allow?')}</H4>
       <DeviceInfoCallout
         deviceType={device?.deviceType}
         deviceIP={device?.deviceIP}
