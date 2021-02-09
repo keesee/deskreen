@@ -13,7 +13,6 @@ import {
   Tabs,
   Tab,
   Icon,
-  HTMLSelect,
   Text,
   ControlGroup,
   Checkbox,
@@ -21,7 +20,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import { Col, Row } from 'react-flexbox-grid';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import i18n from 'i18next';
 import SharingSessionService from '../../features/SharingSessionService';
 import {
   DARK_UI_BACKGROUND,
@@ -29,13 +27,10 @@ import {
   SettingsContext,
 } from '../../containers/SettingsProvider';
 import CloseOverlayButton from '../CloseOverlayButton';
-import i18n_client, {
-  getLangFullNameToLangISOKeyMap,
-  getLangISOKeyToLangFullNameMap,
-} from '../../configs/i18next.config.client';
 import SettingRowLabelAndInput from './SettingRowLabelAndInput';
 import isWithReactRevealAnimations from '../../utils/isWithReactRevealAnimations';
 import config from '../../api/config';
+import LanguageSelector from '../LanguageSelector';
 
 const { port } = config;
 
@@ -73,13 +68,7 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
   const [latestVersion, setLatestVersion] = useState('');
   const [currentVersion, setCurrentVersion] = useState('');
 
-  const {
-    isDarkTheme,
-    setIsDarkThemeHook,
-    setCurrentLanguageHook,
-  } = useContext(SettingsContext);
-
-  const [languagesList, setLanguagesList] = useState([] as string[]);
+  const { isDarkTheme, setIsDarkThemeHook } = useContext(SettingsContext);
 
   useEffect(() => {
     const getLatestVersion = async () => {
@@ -97,15 +86,6 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
     };
     getCurrentVersion();
   }, []);
-
-  useEffect(() => {
-    const tmp: string[] = [];
-    getLangFullNameToLangISOKeyMap().forEach((_, key) => {
-      tmp.push(key);
-    });
-    setLanguagesList(tmp);
-    setCurrentLanguageHook(i18n_client.language);
-  }, [setCurrentLanguageHook]);
 
   const getClassesCallback = useStylesWithTheme(isDarkTheme);
 
@@ -133,25 +113,6 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
     sharingSessionService.setAppTheme(false);
   }, [isDarkTheme, setIsDarkThemeHook]);
 
-  const onChangeLangueageHTMLSelectHandler = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    if (
-      event.currentTarget &&
-      getLangFullNameToLangISOKeyMap().has(event.currentTarget.value)
-    ) {
-      const newLang =
-        getLangFullNameToLangISOKeyMap().get(event.currentTarget.value) ||
-        'English';
-      i18n.changeLanguage(newLang);
-      // TODO: call sharing sessions service here to notify all connected clients about language change
-      sharingSessionService.sharingSessions.forEach((sharingSession) => {
-        sharingSession?.appLanguageChanged(newLang);
-      });
-      sharingSessionService.setAppLanguage(newLang);
-    }
-  };
-
   const getThemeChangingControlGroupInput = () => {
     return (
       <ControlGroup fill vertical={false}>
@@ -168,17 +129,6 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
           active={isDarkTheme}
         />
       </ControlGroup>
-    );
-  };
-
-  const getLanguageChangingHTMLSelect = () => {
-    return (
-      <HTMLSelect
-        disabled // TODO: remove when tranlations are ready
-        defaultValue={getLangISOKeyToLangFullNameMap().get(i18n.language)}
-        options={languagesList}
-        onChange={onChangeLangueageHTMLSelectHandler}
-      />
     );
   };
 
@@ -205,7 +155,7 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
       <SettingRowLabelAndInput
         icon="translate"
         label={t('Language')}
-        input={getLanguageChangingHTMLSelect()}
+        input={<LanguageSelector />}
       />
       <SettingRowLabelAndInput
         icon="automatic-updates"

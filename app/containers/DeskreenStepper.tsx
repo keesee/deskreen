@@ -6,7 +6,9 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import { Row, Col, Grid } from 'react-flexbox-grid';
-import { Dialog, H3, H4, H5, Icon, Spinner, Text } from '@blueprintjs/core';
+import { Dialog, H1, H3, H4, H5, Icon, Spinner, Text } from '@blueprintjs/core';
+import settings from 'electron-settings';
+import { useTranslation } from 'react-i18next';
 
 import { useToasts } from 'react-toast-notifications';
 
@@ -23,6 +25,8 @@ import SharingSessionService from '../features/SharingSessionService';
 import ConnectedDevicesService from '../features/ConnectedDevicesService';
 import SharingSessionStatusEnum from '../features/SharingSessionService/SharingSessionStatusEnum';
 import Logger from '../utils/LoggerWithFilePrefix';
+import LanguageSelector from '../components/LanguageSelector';
+import { getShuffledArrayOfHello } from '../configs/i18next.config.client';
 
 const log = new Logger(__filename);
 
@@ -32,6 +36,8 @@ const sharingSessionService = remote.getGlobal(
 const connectedDevicesService = remote.getGlobal(
   'connectedDevicesService'
 ) as ConnectedDevicesService;
+
+const Fade = require('react-reveal/Fade');
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -57,6 +63,8 @@ function getSteps() {
 
 // eslint-disable-next-line react/display-name
 const DeskreenStepper = React.forwardRef((_props, ref) => {
+  const { t } = useTranslation();
+
   const classes = useStyles();
 
   const { isDarkTheme, currentLanguage } = useContext(SettingsContext);
@@ -66,6 +74,9 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [isUserAllowedConnection, setIsUserAllowedConnection] = useState(false);
   const [isNoWiFiError, setisNoWiFiError] = useState(false);
+  const [isFirstTimeAppStart, setIsFirstTimeAppStart] = useState(false);
+  const [isDisplayHelloWord, setIsDisplayHelloWord] = useState(true);
+  const [helloWord, setHelloWord] = useState('Hello');
 
   const [
     pendingConnectionDevice,
@@ -106,6 +117,30 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
         setIsAlertOpen(true);
       }
     );
+  }, []);
+
+  useEffect(() => {
+    // const isFirstTimeStart = settings.hasSync('appLanguage');
+    const isFirstTimeStart = true;
+    setIsFirstTimeAppStart(isFirstTimeStart);
+
+    const helloWords = getShuffledArrayOfHello();
+
+    let pos = 0;
+    const helloInterval = setInterval(() => {
+      setIsDisplayHelloWord(false);
+      if (pos + 1 === helloWords.length) {
+        pos = 0;
+      } else {
+        pos += 1;
+      }
+      setHelloWord(helloWords[pos]);
+      setIsDisplayHelloWord(true);
+    }, 4000);
+
+    return () => {
+      clearInterval(helloInterval);
+    };
   }, []);
 
   useEffect(() => {
@@ -361,6 +396,29 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
             </Row>
             <Row center="xs" style={{ marginTop: '10px' }}>
               <H4>Waiting for connection.</H4>
+            </Row>
+          </div>
+        </Grid>
+      </Dialog>
+      <Dialog isOpen={isFirstTimeAppStart} autoFocus usePortal>
+        <Grid>
+          <div style={{ padding: '10px' }}>
+            <Row center="xs" style={{ marginTop: '10px' }}>
+              <Fade collapse opposite when={isDisplayHelloWord} duration={700}>
+                <H1>{helloWord}</H1>
+              </Fade>
+            </Row>
+            <Row center="xs" style={{ marginTop: '20px' }}>
+              <Icon icon="translate" iconSize={50} color="#8A9BA8" />
+            </Row>
+            <Row center="xs" style={{ marginTop: '30px' }}>
+              <Icon
+                icon="globe"
+                iconSize={30}
+                color="#8A9BA8"
+                style={{ marginRight: '15px' }}
+              />
+              <LanguageSelector />
             </Row>
           </div>
         </Grid>
