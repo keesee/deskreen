@@ -6,8 +6,17 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import { Row, Col, Grid } from 'react-flexbox-grid';
-import { Dialog, H1, H3, H4, H5, Icon, Spinner, Text } from '@blueprintjs/core';
-import settings from 'electron-settings';
+import {
+  Button,
+  Dialog,
+  H1,
+  H3,
+  H4,
+  H5,
+  Icon,
+  Spinner,
+  Text,
+} from '@blueprintjs/core';
 import { useTranslation } from 'react-i18next';
 
 import { useToasts } from 'react-toast-notifications';
@@ -27,6 +36,7 @@ import SharingSessionStatusEnum from '../features/SharingSessionService/SharingS
 import Logger from '../utils/LoggerWithFilePrefix';
 import LanguageSelector from '../components/LanguageSelector';
 import { getShuffledArrayOfHello } from '../configs/i18next.config.client';
+import ToggleThemeBtnGroup from '../components/ToggleThemeBtnGroup';
 
 const log = new Logger(__filename);
 
@@ -74,7 +84,9 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [isUserAllowedConnection, setIsUserAllowedConnection] = useState(false);
   const [isNoWiFiError, setisNoWiFiError] = useState(false);
-  const [isFirstTimeAppStart, setIsFirstTimeAppStart] = useState(false);
+  const [isSelectLanguageDialogOpen, setIsSelectLanguageDialogOpen] = useState(
+    false
+  );
   const [isDisplayHelloWord, setIsDisplayHelloWord] = useState(true);
   const [helloWord, setHelloWord] = useState('Hello');
 
@@ -122,7 +134,9 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
   useEffect(() => {
     // const isFirstTimeStart = settings.hasSync('appLanguage');
     const isFirstTimeStart = true;
-    setIsFirstTimeAppStart(isFirstTimeStart);
+    setIsSelectLanguageDialogOpen(isFirstTimeStart);
+
+    if (!isFirstTimeStart) return () => {};
 
     const helloWords = getShuffledArrayOfHello();
 
@@ -400,7 +414,7 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
           </div>
         </Grid>
       </Dialog>
-      <Dialog isOpen={isFirstTimeAppStart} autoFocus usePortal>
+      <Dialog isOpen={isSelectLanguageDialogOpen} autoFocus usePortal>
         <Grid>
           <div style={{ padding: '10px' }}>
             <Row center="xs" style={{ marginTop: '10px' }}>
@@ -408,17 +422,34 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
                 <H1>{helloWord}</H1>
               </Fade>
             </Row>
-            <Row center="xs" style={{ marginTop: '20px' }}>
-              <Icon icon="translate" iconSize={50} color="#8A9BA8" />
+            <Row>
+              <Col xs>
+                <Row center="xs" style={{ marginTop: '20px' }}>
+                  <Icon icon="translate" iconSize={50} color="#8A9BA8" />
+                </Row>
+                <Row center="xs" style={{ marginTop: '30px' }}>
+                  <LanguageSelector />
+                </Row>
+              </Col>
+              <Col xs>
+                <Row center="xs" style={{ marginTop: '20px' }}>
+                  <Icon icon="style" iconSize={50} color="#8A9BA8" />
+                </Row>
+                <Row center="xs" style={{ marginTop: '30px' }}>
+                  <ToggleThemeBtnGroup />
+                </Row>
+              </Col>
             </Row>
-            <Row center="xs" style={{ marginTop: '30px' }}>
-              <Icon
-                icon="globe"
-                iconSize={30}
-                color="#8A9BA8"
-                style={{ marginRight: '15px' }}
-              />
-              <LanguageSelector />
+            <Row center="xs" style={{ marginTop: '20px' }}>
+              <Button
+                minimal
+                rightIcon="chevron-right"
+                onClick={() => {
+                  setIsSelectLanguageDialogOpen(false);
+                }}
+              >
+                {t('Continue')}
+              </Button>
             </Row>
           </div>
         </Grid>

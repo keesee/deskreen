@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { ipcRenderer, remote, shell } from 'electron';
-import React, { useContext, useCallback, useEffect, useState } from 'react';
+import { ipcRenderer, shell } from 'electron';
+import React, { useContext, useEffect, useState } from 'react';
 import {
-  Button,
   Overlay,
   Classes,
   H3,
@@ -14,13 +13,11 @@ import {
   Tab,
   Icon,
   Text,
-  ControlGroup,
   Checkbox,
 } from '@blueprintjs/core';
 import { useTranslation } from 'react-i18next';
 import { Col, Row } from 'react-flexbox-grid';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import SharingSessionService from '../../features/SharingSessionService';
 import {
   DARK_UI_BACKGROUND,
   LIGHT_UI_BACKGROUND,
@@ -31,14 +28,11 @@ import SettingRowLabelAndInput from './SettingRowLabelAndInput';
 import isWithReactRevealAnimations from '../../utils/isWithReactRevealAnimations';
 import config from '../../api/config';
 import LanguageSelector from '../LanguageSelector';
+import ToggleThemeBtnGroup from '../ToggleThemeBtnGroup';
 
 const { port } = config;
 
 const Fade = require('react-reveal/Fade');
-
-const sharingSessionService = remote.getGlobal(
-  'sharingSessionService'
-) as SharingSessionService;
 
 interface SettingsOverlayProps {
   isSettingsOpen: boolean;
@@ -68,7 +62,7 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
   const [latestVersion, setLatestVersion] = useState('');
   const [currentVersion, setCurrentVersion] = useState('');
 
-  const { isDarkTheme, setIsDarkThemeHook } = useContext(SettingsContext);
+  const { isDarkTheme } = useContext(SettingsContext);
 
   useEffect(() => {
     const getLatestVersion = async () => {
@@ -89,49 +83,6 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
 
   const getClassesCallback = useStylesWithTheme(isDarkTheme);
 
-  const handleToggleDarkTheme = useCallback(() => {
-    if (!isDarkTheme) {
-      document.body.classList.toggle(Classes.DARK);
-      setIsDarkThemeHook(true);
-    }
-    // TODO: call sharing sessions service here to notify all connected clients about theme change
-    sharingSessionService.sharingSessions.forEach((sharingSession) => {
-      sharingSession?.appThemeChanged(true);
-    });
-    sharingSessionService.setAppTheme(true);
-  }, [isDarkTheme, setIsDarkThemeHook]);
-
-  const handleToggleLightTheme = useCallback(() => {
-    if (isDarkTheme) {
-      document.body.classList.toggle(Classes.DARK);
-      setIsDarkThemeHook(false);
-    }
-    // TODO: call sharing sessions service here to notify all connected clients about theme change
-    sharingSessionService.sharingSessions.forEach((sharingSession) => {
-      sharingSession?.appThemeChanged(false);
-    });
-    sharingSessionService.setAppTheme(false);
-  }, [isDarkTheme, setIsDarkThemeHook]);
-
-  const getThemeChangingControlGroupInput = () => {
-    return (
-      <ControlGroup fill vertical={false}>
-        <Button
-          icon="flash"
-          text="Light"
-          onClick={handleToggleLightTheme}
-          active={!isDarkTheme}
-        />
-        <Button
-          icon="moon"
-          text="Dark"
-          onClick={handleToggleDarkTheme}
-          active={isDarkTheme}
-        />
-      </ControlGroup>
-    );
-  };
-
   const getAutomaticUpdatesCheckboxInput = () => {
     return (
       <Checkbox
@@ -149,8 +100,8 @@ export default function SettingsOverlay(props: SettingsOverlayProps) {
       </Row>
       <SettingRowLabelAndInput
         icon="style"
-        label="Colors"
-        input={getThemeChangingControlGroupInput()}
+        label="Theme"
+        input={<ToggleThemeBtnGroup />}
       />
       <SettingRowLabelAndInput
         icon="translate"
