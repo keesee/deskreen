@@ -35,5 +35,10 @@
   "Connected": "З'єднано",
   "Click to see more": "Натисніть, щоб побачити більше",
   "This should match with Device IP displayed on the screen of device that is trying to connect": "Це повинно збігатися з IP-адресою пристрою на екрані пристрою, який намагається підключитися.",
-  "If IP addresses dont match click Disconnect button": "Якщо IP-адреси не збігаються, натисніть кнопку «Відключити», щоб запобігти несанкціонованому доступу до екрану вашого комп'ютера."
+  "If IP addresses dont match click Disconnect button": "Якщо IP-адреси не збігаються, натисніть кнопку «Відключити», щоб запобігти несанкціонованому доступу до екрану вашого комп'ютера.",
+  "Disconnect": "Відключити",
+  "Choose Entire Screen or App window you want to share": "Виберіть Весь екран або Вікно додатка, яким хочете поділитися",
+  "OR": "ЧИ",
+  "Entire Screen": "Весь екран",
+  "Application Window": "Вікно додатка"
 }

@@ -1,27 +1,3 @@
 {
-  "Confirm": "Confirm",
-  "Make sure your computer and device are connected to same WiFi": "Make sure your computer and device are connected to same WiFi",
-  "Make sure your computer and viewing device are connected to same WiFi": "Make sure your computer and viewing device are connected to same WiFi",
-  "Connect": "Connect",
-  "Select": "Select",
-  "Device is trying to connect, do you allow": "Device is trying to connect, do you allow",
-  "Someone is trying to connect, do you allow?": "Someone is trying to connect, do you allow?",
-  "Partner Device Info": "Partner Device Info",
-  "Device IP": "Device IP",
-  "If you like Deskreen, consider contributing financially": {
-    " Deskreen is open-source": {
-      " Your donations keep us motivated to make Deskreen even better": {
-        "": "If you like Deskreen, consider contributing financially. Deskreen is open-source. Your donations keep us motivated to make Deskreen even better."
-      }
-    }
-  },
-  "If you like Deskreen consider contributing financially Deskreen is open-source Your donations keep us motivated to make Deskreen even better": "If you like Deskreen consider contributing financially Deskreen is open-source Your donations keep us motivated to make Deskreen even better",
-  "Connected Devices": "Connected Devices",
-  "Settings": "Settings",
-  "This should match with Device IP displayed on the screen of device that is trying to connect": {
-    "": "This should match with Device IP displayed on the screen of device that is trying to connect."
-  },
-  "If IP addresses don't match click Disconnect button": {
-    "": "If IP addresses don't match click Disconnect button."
-  }
+  "Confirm": "Confirm"
 }

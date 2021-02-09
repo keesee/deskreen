@@ -111,7 +111,7 @@ export default function TopPanel(props: any) {
         </Button>
       </Tooltip>
     );
-  }, []);
+  }, [donateTooltipContent, t]);
 
   const renderConnectedDevicesListButton = useCallback(() => {
     return (
@@ -132,7 +132,7 @@ export default function TopPanel(props: any) {
         </Tooltip>
       </div>
     );
-  }, [getClassesCallback, handleToggleConnectedDevicesListDrawer]);
+  }, [getClassesCallback, handleToggleConnectedDevicesListDrawer, t]);
 
   const renderHelpButton = useCallback(() => {
     return (
@@ -155,7 +155,7 @@ export default function TopPanel(props: any) {
         </Tooltip>
       </div>
     );
-  }, [getClassesCallback]);
+  }, [getClassesCallback, t]);
 
   const renderSettingsButton = useCallback(() => {
     return (
@@ -175,7 +175,7 @@ export default function TopPanel(props: any) {
         </Tooltip>
       </div>
     );
-  }, [getClassesCallback, handleSettingsOpen]);
+  }, [getClassesCallback, handleSettingsOpen, t]);
 
   const renderLogoWithAppName = useCallback(() => {
     return (
@@ -206,7 +206,7 @@ export default function TopPanel(props: any) {
         </Tooltip>
       </div>
     );
-  }, [getClassesCallback]);
+  }, [deskreenButtonTooltip, getClassesCallback]);
 
   return (
     <>

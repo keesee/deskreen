@@ -2595,7 +2595,7 @@ exports[`should match exact snapshot 1`] = `
                                               class="bp3-html-select"
                                             >
                                               <select
-                                                style="border-radius: 50px;"
+                                                style="border-radius: 50px; width: 120px;"
                                               >
                                                 <option
                                                   value="English"
@@ -2847,7 +2847,7 @@ exports[`should match exact snapshot 1`] = `
                                               class="bp3-html-select"
                                             >
                                               <select
-                                                style="border-radius: 50px;"
+                                                style="border-radius: 50px; width: 120px;"
                                               >
                                                 <option
                                                   value="English"
@@ -3266,6 +3266,7 @@ exports[`should match exact snapshot 1`] = `
                                                           style={
                                                             Object {
                                                               "borderRadius": "50px",
+                                                              "width": "120px",
                                                             }
                                                           }
                                                         >
@@ -3278,6 +3279,7 @@ exports[`should match exact snapshot 1`] = `
                                                               style={
                                                                 Object {
                                                                   "borderRadius": "50px",
+                                                                  "width": "120px",
                                                                 }
                                                               }
                                                             >
@@ -3710,7 +3712,7 @@ exports[`should match exact snapshot 1`] = `
                                       class="bp3-html-select"
                                     >
                                       <select
-                                        style="border-radius: 50px;"
+                                        style="border-radius: 50px; width: 120px;"
                                       >
                                         <option
                                           value="English"

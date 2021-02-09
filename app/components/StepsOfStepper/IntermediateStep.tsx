@@ -1,6 +1,7 @@
 import React from 'react';
 import { remote } from 'electron';
-import { Button } from '@blueprintjs/core';
+import { Button, Text } from '@blueprintjs/core';
+import { TFunction, useTranslation } from 'react-i18next';
 import { Col, Row } from 'react-flexbox-grid';
 import DEVICES from '../../constants/test-devices.json';
 import ScanQRStep from './ScanQRStep';
@@ -28,6 +29,7 @@ interface IntermediateStepProps {
 }
 
 function getStepContent(
+  t: TFunction<string>,
   stepIndex: number,
   handleNextEntireScreen: () => void,
   handleNextApplicationWindow: () => void,
@@ -38,10 +40,19 @@ function getStepContent(
       return <ScanQRStep />;
     case 1:
       return (
-        <ChooseAppOrScreeenStep
-          handleNextEntireScreen={handleNextEntireScreen}
-          handleNextApplicationWindow={handleNextApplicationWindow}
-        />
+        <>
+          <Row center="xs">
+            <div style={{ marginBottom: '10px' }}>
+              <Text>
+                {t('Choose Entire Screen or App window you want to share')}
+              </Text>
+            </div>
+          </Row>
+          <ChooseAppOrScreeenStep
+            handleNextEntireScreen={handleNextEntireScreen}
+            handleNextApplicationWindow={handleNextApplicationWindow}
+          />
+        </>
       );
     case 2:
       return <ConfirmStep device={pendingConnectionDevice} />;
@@ -55,6 +66,8 @@ function isConfirmStep(activeStep: number, steps: string[]) {
 }
 
 export default function IntermediateStep(props: IntermediateStepProps) {
+  const { t } = useTranslation();
+
   const {
     activeStep,
     steps,
@@ -83,6 +96,7 @@ export default function IntermediateStep(props: IntermediateStepProps) {
       }}
     >
       {getStepContent(
+        t,
         activeStep,
         handleNextEntireScreen,
         handleNextApplicationWindow,

@@ -35,5 +35,10 @@
   "Connected": "Connected",
   "Click to see more": "Click to see more",
   "This should match with Device IP displayed on the screen of device that is trying to connect": "This should match with Device IP displayed on the screen of device that is trying to connect.",
-  "If IP addresses dont match click Disconnect button": "If IP addresses don't match click Disconnect button to prevent unauthorized access to your computer screen."
+  "If IP addresses dont match click Disconnect button": "If IP addresses don't match click Disconnect button to prevent unauthorized access to your computer screen.",
+  "Disconnect": "Disconnect",
+  "Choose Entire Screen or App window you want to share": "Choose Entire Screen or App window you want to share",
+  "OR": "OR",
+  "Entire Screen": "Entire Screen",
+  "Application Window": "Application Window"
 }

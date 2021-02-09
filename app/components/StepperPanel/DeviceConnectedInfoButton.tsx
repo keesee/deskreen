@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import { Icon, Text, Button, Popover, Tooltip } from '@blueprintjs/core';
-import { useTranslation } from 'react-i18next';
+import { TFunction, useTranslation } from 'react-i18next';
 import DeviceInfoCallout from '../DeviceInfoCallout';
 import isWithReactRevealAnimations from '../../utils/isWithReactRevealAnimations';
 
@@ -11,9 +11,12 @@ interface DeviceConnectedInfoButtonProps {
 }
 
 const getDeviceConnectedPopoverContent = (
+  t: TFunction<string>,
   pendingConnectionDevice: Device,
   handleDisconnect: () => void
 ) => {
+  const disconnectButtonText = t('Disconnect');
+
   return (
     <Row>
       <div style={{ padding: '20px', borderRadius: '100px' }}>
@@ -36,7 +39,7 @@ const getDeviceConnectedPopoverContent = (
               }}
               style={{ width: '100%', borderRadius: '5px' }}
             >
-              Disconnect
+              {disconnectButtonText}
             </Button>
           </Col>
         </Row>
@@ -55,7 +58,7 @@ export default function DeviceConnectedInfoButton(
   return (
     <>
       <Popover
-        content={getDeviceConnectedPopoverContent(device, onDisconnect)}
+        content={getDeviceConnectedPopoverContent(t, device, onDisconnect)}
         position="bottom"
         inheritDarkTheme={false}
         transitionDuration={isWithReactRevealAnimations() ? 700 : 0}
@@ -69,7 +72,7 @@ export default function DeviceConnectedInfoButton(
             id="connected-device-info-stepper-button"
             intent="success"
             style={{
-              width: '120px',
+              width: '150px',
               height: '10px !important',
               borderRadius: '100px',
               position: 'relative',

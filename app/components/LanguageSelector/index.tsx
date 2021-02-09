@@ -53,6 +53,7 @@ export default function LanguageSelector() {
       onChange={onChangeLanguageHTMLSelectHandler}
       style={{
         borderRadius: '50px',
+        width: '120px',
       }}
     />
   );

@@ -35,5 +35,10 @@
   "Connected": "Подключено",
   "Click to see more": "Нажмите, чтобы увидеть больше",
   "This should match with Device IP displayed on the screen of device that is trying to connect": "Это должно совпадать с IP-адресом устройства, отображаемым на экране устройства, которое пытается подключиться.",
-  "If IP addresses dont match click Disconnect button": "Если IP-адреса не совпадают, нажмите кнопку «Отключить», чтобы предотвратить несанкционированный доступ к экрану вашего компьютера."
+  "If IP addresses dont match click Disconnect button": "Если IP-адреса не совпадают, нажмите кнопку «Отключить», чтобы предотвратить несанкционированный доступ к экрану вашего компьютера.",
+  "Disconnect": "Отключить",
+  "Choose Entire Screen or App window you want to share": "Выберите Весь экран или Окно приложения, которым хотите поделиться",
+  "OR": "ИЛИ",
+  "Entire Screen": "Весь экран",
+  "Application Window": "Окно приложения"
 }
